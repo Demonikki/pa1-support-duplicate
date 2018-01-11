@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+export BASE=/autograder
+export RESULTS_BASE=/autograder
+
+source source/run_autograder_parameterized

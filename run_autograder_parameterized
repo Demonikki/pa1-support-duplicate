@@ -1,0 +1,11 @@
+
+cd $BASE/source
+mkdir -p $BASE/results/
+
+cp $BASE/submission/ucsd-cse12-pa1/cse12pa1student/ShoppingBagTest.java \
+   $BASE/source/ucsd-cse12-pa1/cse12pa1student/
+
+java_files=$(find ./ -name "*.java")
+javac -cp ucsd-cse12-pa1/lib/*:. $java_files
+cd ucsd-cse12-pa1 && java -cp lib/*:. cse12pa1grading/Grader $RESULTS_BASE/results/results.json
+
